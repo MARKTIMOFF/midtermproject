@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    @font-face {
+      font-family: 'EuroSans Pro';
+      src: url('font/EuroSansPro-Reg.ttf') format('woff2'),
+           url('font/EuroSansPro-Reg.ttf') format('woff');
+      font-weight: 400;
+      font-style: normal;
+}
+.header {
+width: 1512px;
+height: 80px;
+background-color: #2C2C2B;
+position: fixed;
+top: 0;
+z-index: 999;
+}
+.text-logo {
+position: fixed;
+left: 90px;
+top: 28px;
+color: #FFF;
+font-family: "EuroSans Pro", sans-serif;
+font-style: normal;
+font-size: 32px;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+z-index:1000;
+text-decoration: none;
+}
+.text-about {
+position: fixed;
+left: 612px;
+top: 34px;
+color: #FFF;
+font-family: "EuroSans Pro", sans-serif;
+font-style: normal;
+font-size: 18px;
+font-weight: 500;
+line-height: normal;
+text-transform: uppercase;
+z-index:1000;
+transition: all 0.3s ease
+}
+.text-about:hover {
+  color: #C0AC95; 
+  transform: scale(1.05); 
+  text-decoration: underline;
+}
+.text-history {
+position: fixed;
+left: 1000px;
+top: 34px;
+color: #FFF;
+font-family: "EuroSans Pro", sans-serif;
+font-style: normal;
+font-size: 18px;
+font-weight: 500;
+line-height: normal;
+text-transform: uppercase;
+z-index:1000;
+transition: all 0.3s ease;
+}
+.text-history:hover {
+  color: #C0AC95; 
+  transform: scale(1.05); 
+  text-decoration: underline; 
+}
+.text-recipe {
+position: fixed;
+left: 1388px;
+top: 34px;
+color: #FFF;
+font-family: "EuroSans Pro", sans-serif;
+font-style: normal;
+font-size: 18px;
+font-weight: 500;
+line-height: normal;
+text-transform: uppercase;
+z-index:1000;
+transition: all 0.3s ease;
+text-decoration: none;
+}
+.text-recipe:hover {
+  color: #C0AC95; 
+  transform: scale(1.05); 
+  text-decoration: underline;
+}
+.hero {
+width: 1512px;
+height: 900px;
+background-color: #2C2C2B;
+position: relative;
+}
+.line1 {
+width: 1352px;
+height: 1px;
+background: #C0AC95;
+position: absolute;
+left:80px;
+top: 90px;
+}
+.line2 {
+width: 1352px;
+height: 1px;
+background: #C0AC95;
+position: absolute;
+left:80px;
+top: 810px;
+}
+.hero-image {
+position: absolute;
+left: 170px;
+top: 160px;
+width: 420px;
+height: 560px;
+flex-shrink: 0;
+border-radius: 160px 0px 0px 0px;
+border: 4px solid #C0AC95;
+object-fit: cover;
+}
+.text-1 {
+position: absolute;
+left: 740px;
+top: 240px;
+color: #FFF;
+font-family: "EuroSans Pro", sans-serif;
+font-style: normal;
+font-size: 80px;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-2 {
+position: absolute;
+left: 740px;
+top: 300px;
+color: #C0AC95;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 120px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-3 {
+position: absolute;
+width:600px;
+left: 740px;
+top: 420px;
+color: #fff;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 28px;
+font-style: normal;
+font-weight: 280;
+line-height: normal;
+}
+.about {
+top:900;
+width: 1512px;
+height: 800px;
+background-color: #C0AC95;
+position: relative;
+}
+.line3 {
+width: 670px;
+height: 1px;
+background: #2C2C2B;
+position: absolute;
+left: 80px;
+top: 1040px;
+}
+.line4 {
+width: 1352px;
+height: 1px;
+background: #2C2C2B;
+position: absolute;
+left:80px;
+top: 1720px;
+}
+.text-4 {
+position: absolute;
+left: 80px;
+top: 940px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 80px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+}
+      .text-5 {
+      position: absolute;
+      left: 485px;
+      top: 1080px;
+      color: #2C2C2B;
+      font-family: "EuroSans Pro", sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+      }
+      .text-6 {
+      position: absolute;
+      width:870px;
+      text-align: justify;
+      left: 80px;
+      top: 1140px;
+      color: #2C2C2B;
+      font-family: "EuroSans Pro", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-indent: 80px;
+       }
+      .text-7 {
+      position: absolute;
+      width:574px;
+      text-align: center;
+      left: 450px;
+      top: 1330px;
+      color: #2C2C2B;
+      font-family: "EuroSans Pro", sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+      .about-image1 {
+      position: absolute;
+      left: 80px;
+      top: 1300px;
+      width: 308px;
+      height: 374px;
+      flex-shrink: 0;
+      border-radius: 0px 0px 0px 120px;
+      border: 2px solid #C0AC95;
+      object-fit: cover;
+    }
+      .about-image2 {
+      position: absolute;
+      left: 1086px;
+      top: 1040px;
+      width: 340px;
+      height: 636px;
+      flex-shrink: 0;
+      border-radius: 0px 160px 0px 0px;
+      border: 2px solid #C0AC95;
+      object-fit: cover;
+    }
+      .text-8 {
+      position: absolute;
+      left: 485px;
+      top: 1510px;
+      color: #2C2C2B;
+      font-family: "EuroSans Pro", sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+      .text-9 {
+      position: absolute;
+      width:470px;
+      text-align: justify;
+      left: 485px;
+      top: 1570px;
+      color: #2C2C2B;
+      font-family: "EuroSans Pro", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-indent: 80px;
+      }
+      .history {
+      top:1700;
+      width: 1512px;
+      height: 840px;
+      background-color: #C0AC95;
+      position: relative;
+     }
+     .line5 {
+      width: 670px;
+      height: 1px;
+      background: #2C2C2B;
+      position: absolute;
+      left: 80px;
+      top: 1860px;
+    }
+    .text-10 {
+      position: absolute;
+      left: 80px;
+      top: 1760px;
+      color: #2C2C2B;
+      font-family: "EuroSans Pro", sans-serif;
+      font-size: 80px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+      .text-11 {
+      position: absolute;
+      width:670px;
+      text-align: justify;
+      left: 80px;
+      top: 1900px;
+      color: #2C2C2B;
+      font-family: "EuroSans Pro", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-indent: 80px;
+      }
+      .history-image1 {
+      position: absolute;
+      left: 80px;
+      top: 2020px;
+      width: 272px;
+      height: 345px;
+      flex-shrink: 0;
+      border-radius: 80px 0px 0px 0px;
+      border: 1px solid #C0AC95;
+      object-fit: cover;
+    }
+      .history-image2 {
+      position: absolute;
+      left: 392px;
+      top: 2180px;
+      width: 272px;
+      height: 345px;
+      flex-shrink: 0;
+      border-radius: 0px 0px 0px 80px;
+      border: 1px solid #C0AC95;
+      object-fit: cover;
+    }
+.text-12 {
+position: absolute;
+left: 760px;
+top: 2020px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-13 {
+position: absolute;
+width:660px;
+text-align: justify;
+left: 760px;
+top: 2060px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-indent: 80px;
+}
+.text-14 {
+position: absolute;
+left: 760px;
+top: 2300px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-15 {
+position: absolute;
+width:660px;
+text-align: justify;
+left: 760px;
+top: 2340px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-indent: 80px;
+}
+.line6 {
+width: 1512px;
+height: 960px;
+background: #2c2c2b;
+position: absolute;
+left:0px;
+top: 2580px;
+}
+.line7 {
+width: 1352px;
+height: 1px;
+background: #C0AC95;
+position: absolute;
+left:80px;
+top: 2720px;
+}
+.text-16 {
+position: absolute;
+left:620px;
+top: 2640px;
+color: #C0AC95;;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-17 {
+position: absolute;
+width:1100px;
+left:205px;
+text-align: center;
+top: 2800px;
+color: #fff;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 28px;
+font-style: normal;
+font-weight: 280;
+line-height: normal;
+}
+.line8 {
+width: 1352px;
+height: 1px;
+background: #C0AC95;
+position: absolute;
+left:80px;
+top: 3000px;
+z-index:2;
+}
+.line9 {
+width: 1352px;
+height: 1px;
+background: #C0AC95;
+position: absolute;
+left:80px;
+top: 3400px;
+z-index:2;
+}
+.hover-container {
+  position: absolute;
+  top: 2970px;
+  width: 1512px;
+  height: 460px;
+  z-index: 1;
+}
+.button-line {
+  width: 100%;
+  height: 100%;
+  background-color: #2C2C2B;
+  transition: background-color 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.text-18 {
+  position: absolute;
+  top: 180px; 
+  left: 360px;
+  color: #C0AC95;
+  font-family: "EuroSans Pro";
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  z-index: 2;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}.text-18:hover {
+  color: #C0AC95; 
+  transform: scale(1.005); 
+  text-decoration: underline; 
+}
+.hover-container:hover .button-line {
+  background-color: #fff;
+}
+  </style>
+</head>
+<div class="header"></div>
+<a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;" class="text-logo">DESSERT CODDING</a>
+<div class="text-about">about</div>
+<div class="text-history">history</div>
+<a href="recipe.html" class="text-recipe">recipe</a>
+<body>
+<div class="hero">
+<div class="line1"></div>
+<div class="line2"></div>
+<div class="line3"></div>
+<div class="line4"></div>
+<div class="line5"></div>
+<div class="line6"></div>
+<div class="line7"></div>
+<div class="line8"></div>
+<div class="line9"></div>
+<img src="pict1.jpeg" class="hero-image">
+<div class="text-1">CLASSIC</div>
+<div class="text-2">TIRAMISU</div>
+<div class="text-3">From the heart of Italy to your plate.
+For over 60 years, this timeless dessert has brought sweetness to life, from luxury dining rooms to cherished homemade moments.</div>
+<div class="text-4">ABOUT</div>
+<div class="text-5">TIMELESS ITALIAN DELIGHT</div>
+<div class="text-6">Tiramisu is a classic Italian dessert that has won hearts worldwide with its irresistible layers of coffee-soaked ladyfingers, mascarpone cheese, and a dusting of cocoa powder. Originating from the Veneto region of Italy, Tiramisu combines the best of coffee, cream, and cocoa,  The beauty of Tiramisu lies not just in its simple ingredients but in the harmonious balance of textures and flavours – the smooth, creamy mascarpone filling contrasts beautifully with the slight crunch of the ladyfingers and the bold, aromatic coffee.</div>
+<div class="text-7">tirami su 'pick me up' or 'cheer me up' - Italian meaning</div>
+<img src="pict2.jpeg" class="about-image1">
+<img src="pict3.jpeg" class="about-image2">
+<div class="text-8">Perfect for Any Occasion</div>
+<div class="text-9">Whether served at a family gathering, a special celebration,  Tiramisu is a dessert that brings people together. Its sophisticated flavour and delicate textures make it the ideal way to end any meal. </div>
+<div class="text-10">HISTORY</div>
+<div class="text-11">Tiramisu, one of Italy's most beloved desserts, has an intriguing and somewhat mysterious history. Its origins are often debated, with several regions and towns in Italy claiming to be the birthplace of this delicious treat.</div>
+<img src="pict4.jpg" class="history-image1">
+<img src="pict5.jpeg" class="history-image2">
+<div class="text-12">Origins in the Veneto Region</div>
+<div class="text-13">The most widely accepted story suggests that Tiramisu was created in the Veneto region, specifically in the town of Treviso, in the 1960s. It is believed to have been invented by Carlo Valerio at Le Beccherie, a renowned restaurant. The dessert was originally made to celebrate a local tradition and was designed to be a revitalizing treat, rich in energy and flavor. The name "Tiramisu" translates to "pick me up," reflecting the dessert's energizing ingredients, including strong coffee and cocoa. </div>
+<div class="text-14">The Rival Claims</div>
+<div class="text-15">Despite the popular belief that Tiramisu was born in Treviso, other regions in Italy also claim to have invented it. In the region of Friuli Venezia Giulia, some believe that the dessert dates back to the 1950s, while others assert that Tiramisu has roots in the more ancient "soup of the poor" made with savoiardi biscuits, a sweet version of the humble dessert known to be served in northern Italy as early as the 17th century. </div>
+<div class="text-16">Global Phenomenon</div>
+<div class="text-17">Tiramisu quickly spread beyond Italy, becoming a worldwide sensation. Its rise to fame in the 1980s and 1990s coincided with the global boom in Italian cuisine, as more and more people fell in love with it. Today, desert is enjoyed in many variations around the world and is a staple at Italian restaurants and home kitchens alike. </div>
+<div class="hover-container">
+  <div class="button-line"></div>
+  <a href="recipe.html"class="text-18">find your recipe ></a>
+</div>
+</body>
+</html>

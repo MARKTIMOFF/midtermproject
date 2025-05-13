@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    @font-face {
+      font-family: 'EuroSans Pro';
+      src: url('font/EuroSansPro-Reg.ttf') format('woff2'),
+           url('font/EuroSansPro-Reg.ttf') format('woff');
+      font-weight: 400;
+      font-style: normal;
+}
+.header {
+width: 1512px;
+height: 80px;
+background-color: #2C2C2B;
+position: fixed;
+top: 0;
+z-index: 999;
+}
+.text-logo {
+position: fixed;
+left: 90px;
+top: 28px;
+color: #FFF;
+font-family: "EuroSans Pro", sans-serif;
+font-style: normal;
+font-size: 32px;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+z-index:1000;
+text-decoration: none;
+}
+.text-about {
+position: fixed;
+left: 612px;
+top: 34px;
+color: #FFF;
+font-family: "EuroSans Pro", sans-serif;
+font-style: normal;
+font-size: 18px;
+font-weight: 500;
+line-height: normal;
+text-transform: uppercase;
+z-index:1000;
+transition: all 0.3s ease
+}
+.text-about:hover {
+  color: #C0AC95; 
+  transform: scale(1.05); 
+  text-decoration: underline;
+}
+.text-history {
+position: fixed;
+left: 1000px;
+top: 34px;
+color: #FFF;
+font-family: "EuroSans Pro", sans-serif;
+font-style: normal;
+font-size: 18px;
+font-weight: 500;
+line-height: normal;
+text-transform: uppercase;
+z-index:1000;
+transition: all 0.3s ease;
+}
+.text-history:hover {
+  color: #C0AC95; 
+  transform: scale(1.05); 
+  text-decoration: underline; 
+}
+.text-recipe {
+position: fixed;
+left: 1388px;
+top: 34px;
+color: #FFF;
+font-family: "EuroSans Pro", sans-serif;
+font-style: normal;
+font-size: 18px;
+font-weight: 500;
+line-height: normal;
+text-transform: uppercase;
+z-index:1000;
+transition: all 0.3s ease
+}
+.text-recipe:hover {
+  color: #C0AC95; 
+  transform: scale(1.05); 
+  text-decoration: underline;
+}
+.linehero2 {
+width: 1352px;
+height: 1px;
+background: #2C2C2B;
+position: absolute;
+left:80px;
+top: 810px;
+}
+.hero-image {
+position: absolute;
+left: 968px;
+top: 154px;
+width: 460px;
+height: 580px;
+flex-shrink: 0;
+border-radius: 00px 0px 0px 160px;
+border: 4px solid #C0AC95;
+object-fit: cover;
+}
+.text-classic {
+position: absolute;
+left: 80px;
+top: 140px;
+color:  #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-style: normal;
+font-size: 80px;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-with {
+position: absolute;
+left: 560px;
+top: 260px;
+color:  #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-block-hero {
+position: absolute;
+width:612px;
+left: 80px;
+top: 320px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 32px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+.text-4 {
+position: absolute;
+left: 60px;
+top:484px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.text-ingridients {
+width: 380px;
+position: absolute;
+left: 384px;
+top: 500px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.linehero1 {
+width: 670px;
+height: 1px;
+background: #2C2C2B;
+position: absolute;
+left: 80px;
+top: 234px;
+}
+.text-steps1{
+position: absolute;
+left: 80px;
+top: 880px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 32px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-steps-s1 {
+position: absolute;
+width:600px;
+text-align: left;
+left: 80px;
+top: 940px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.step1image {
+position: absolute;
+left: 968px;
+top: 880px;
+width: 460px;
+height: 380px;
+flex-shrink: 0;
+border: 2px solid #C0AC95;
+object-fit: cover;
+}
+.linesteps1 {
+width: 1352px;
+height: 1px;
+background: #C0AC95;
+position: absolute;
+left:80px;
+top: 1330px;
+}
+.step2image {
+position: absolute;
+left: 968px;
+top: 1400px;
+width: 460px;
+height: 380px;
+flex-shrink: 0;
+border: 2px solid #C0AC95;
+object-fit: cover;
+}
+.text-steps2{
+position: absolute;
+left: 80px;
+top: 1400px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 32px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-steps-s2 {
+position: absolute;
+width:600px;
+text-align: left;
+left: 80px;
+top: 1460px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.linesteps2 {
+width: 1352px;
+height: 1px;
+background: #C0AC95;
+position: absolute;
+left:80px;
+top: 1850px;
+}
+.step3image {
+position: absolute;
+left: 968px;
+top: 1920px;
+width: 460px;
+height: 380px;
+flex-shrink: 0;
+border: 2px solid #C0AC95;
+object-fit: cover;
+}
+.text-steps3{
+position: absolute;
+left: 80px;
+top: 1920px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 32px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-steps-s3 {
+position: absolute;
+width:600px;
+text-align: left;
+left: 80px;
+top: 1980px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.linesteps3 {
+width: 1352px;
+height: 1px;
+background: #C0AC95;
+position: absolute;
+left:80px;
+top: 2370px;
+}
+.step4image {
+position: absolute;
+left: 968px;
+top: 2440px;
+width: 460px;
+height: 380px;
+flex-shrink: 0;
+border: 2px solid #C0AC95;
+object-fit: cover;
+}
+.text-steps4{
+position: absolute;
+left: 80px;
+top: 2440px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 32px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-steps-s4 {
+position: absolute;
+width:600px;
+text-align: left;
+left: 80px;
+top: 2500px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.linesteps4 {
+width: 1352px;
+height: 1px;
+background: #C0AC95;
+position: absolute;
+left:80px;
+top: 2890px;
+}
+.step5image {
+position: absolute;
+left: 968px;
+top: 2960px;
+width: 460px;
+height: 380px;
+flex-shrink: 0;
+border: 2px solid #C0AC95;
+object-fit: cover;
+}
+.text-steps5{
+position: absolute;
+left: 80px;
+top: 2960px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 32px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-steps-s5 {
+position: absolute;
+width:600px;
+text-align: left;
+left: 80px;
+top: 3020px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.linesteps5 {
+width: 1352px;
+height: 1px;
+background: #C0AC95;
+position: absolute;
+left:80px;
+top: 3410px;
+}
+.step6image {
+position: absolute;
+left: 968px;
+top: 3480px;
+width: 460px;
+height: 380px;
+flex-shrink: 0;
+border: 2px solid #C0AC95;
+object-fit: cover;
+}
+.text-steps6{
+position: absolute;
+left: 80px;
+top: 3480px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 32px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-steps-s6 {
+position: absolute;
+width:600px;
+text-align: left;
+left: 80px;
+top: 3540px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.linesteps6 {
+width: 1352px;
+height: 1px;
+background: #C0AC95;
+position: absolute;
+left:80px;
+top: 3930px;
+}
+.step7image {
+position: absolute;
+left: 968px;
+top: 4000px;
+width: 460px;
+height: 380px;
+flex-shrink: 0;
+border: 2px solid #C0AC95;
+object-fit: cover;
+}
+.text-steps7{
+position: absolute;
+left: 80px;
+top: 4000px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 32px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+text-transform: uppercase;
+}
+.text-steps-s7 {
+position: absolute;
+width:600px;
+text-align: left;
+left: 80px;
+top: 4060px;
+color: #2C2C2B;
+font-family: "EuroSans Pro", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.linesteps7 {
+width: 1352px;
+height: 1px;
+background: #C0AC95;
+position: absolute;
+left:80px;
+top: 4450px;
+}
+.container {
+  position: absolute;
+  top: 4510px;
+  width: 1512px;
+  height: 240px;
+  background-color: #2C2C2B;
+}
+.text-18 {
+  position: absolute;
+  top: 4560px; 
+  left: 600px;
+  color: #C0AC95;
+  font-family: "EuroSans Pro";
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  z-index: 2;
+  text-decoration: none;
+}
+  </style>
+</head>
+<div class="header"></div>
+<a href="index copy 3.html"class="text-logo">DESSERT CODDING</a>
+<div class="text-about">about</div>
+<div class="text-history">history</div>
+<div class="text-recipe">recipe</div>
+<body>
+<div class="hero">
+<div class="linehero1"></div>
+<div class="linehero2"></div>
+<div class="linesteps1"></div>
+<div class="linesteps2"></div>
+<div class="linesteps3"></div>
+<div class="linesteps4"></div>
+<div class="linesteps5"></div>
+<div class="linesteps6"></div>
+<div class="linesteps7"></div>
+<div class="linesteps8"></div>
+<img src="pict1.jpeg" class="hero-image">
+<div class="text-classic">classic recipe</div>
+<div class="text-with">with Kahlúa liquor</div>
+<div class="text-block-hero ">An elegant Italian dessert made even more indulgent with Kahlúa, the rich coffee-flavored liqueur that perfectly enhances every creamy, cocoa-dusted bite.</div>
+<div class="text-4">
+  <ul>
+    <li>Prep Time: 30 minutes</li>
+    <li>Chill Time: 6+ hours</li>
+    <li>Servings: 8–10</li> 
+ <ul>
+</div>
+<div class="text-ingridients"><strong>Ingredients:</strong>
+  <ul>
+    <li>6 large egg yolks</li>
+    <li>3/4 cup (150g) granulated sugar</li>
+    <li>1 cup (240ml) heavy cream</li>
+    <li>16 oz (450g) mascarpone cheese, softened</li>
+    <li>2 cups (480ml) strong brewed espresso or dark coffee</li>
+    <li>1/4 cup (60ml) Kahlúa coffee liqueur</li>
+    <li>1 package ladyfingers (200–250g)</li>
+    <li>Unsweetened cocoa powder, for dusting</li>
+  </ul>
+</div>
+<div class="text-steps1">#1  prepare the cream base</div>
+<div class="text-steps2">#2  whip the cream</div>
+<div class="text-steps3">#3  make the soaking liquid</div>
+<div class="text-steps4">#4  Dip the Ladyfingers</div>
+<div class="text-steps5">#5  Layer the Tiramisu</div>
+<div class="text-steps6">#6  Chill and Set</div>
+<div class="text-steps7">#7  Finish with Cocoa</div>
+<div class="text-steps-s1">
+  <ul>
+    <li>In a mixing bowl, beat the egg yolks and sugar on medium speed for 5–7 minutes until thick, pale, and creamy.
+    <li>Add the mascarpone cheese and beat gently until smooth.</li>
+  <ul>
+</div>
+<div class="text-steps-s2">
+  <ul>
+    <li>In another bowl, whip the heavy cream until stiff peaks form.</li>
+    <li>Carefully fold the whipped cream into the mascarpone mixture. Do not overmix.</li>
+  <ul>
+</div>
+<div class="text-steps-s3">
+  <ul>
+    <li>In a shallow bowl, combine the espresso and Kahlúa. Let it cool completely to room temperature.</li>
+  <ul>
+</div>
+<div class="text-steps-s4">
+  <ul>
+    <li>Quickly dip each ladyfinger into the coffee-Kahlúa mix for about 1–2 seconds per side (don’t let them get soggy).</li>
+    <li>Line the bottom of a 9x13 inch dish (or similar) with the dipped ladyfingers.</li>
+  <ul>
+</div>
+<div class="text-steps-s5">
+  <ul>
+    <li>Spread half of the mascarpone cream mixture over the ladyfingers and smooth it out.</li>
+    <li>Add a second layer of dipped ladyfingers, followed by the rest of the mascarpone cream.</li>
+  <ul>
+</div>
+<div class="text-steps-s6">
+  <ul>
+    <li>Cover and refrigerate the tiramisu for at least 6 hours, ideally overnight, for the best flavor and texture.</li>
+  <ul>
+</div>
+<div class="text-steps-s7">
+  <ul>
+    <li>Before serving, dust generously with cocoa powder and garnish with chocolate shavings if desired.</li>
+  <ul>
+</div>
+<img src="pict6.jpeg" class="step1image">
+<img src="pict7.jpeg" class="step2image">
+<img src="pict8.jpeg" class="step3image">
+<img src="pict9.jpeg" class="step4image">
+<img src="pict10.jpeg" class="step5image">
+<img src="pict11.jpeg" class="step6image">
+<img src="pict12.jpeg" class="step7image">
+<div class="container"></div>
+ <div class="text-18">Enjoy!</div>
+</div>
+</body>
+</html>
